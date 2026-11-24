@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://constanciab1-production.up.railway.app/api'
+  apiUrl: 'https://constanciabackendterminado-production.up.railway.app/api'
 };
