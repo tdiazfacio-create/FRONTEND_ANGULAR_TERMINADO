@@ -1,0 +1,64 @@
+
+<div class="page-container">
+  <div class="scan-card animate-up">
+
+    <div class="card-header">
+      <img
+        src="assets/images/logo_tecblanco.png"
+        alt="Logo TecNM"
+        class="tec-logo"
+      />
+      <p class="header-subtitle">Registro de Salida</p>
+    </div>
+
+    <div class="card-content">
+
+      <div class="conference-info">
+        <span class="badge">Estás registrando tu salida</span>
+      </div>
+
+      <p class="instruction">
+        Ingresa tu número de control para registrar
+        tu salida de la conferencia.
+      </p>
+
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="input-group">
+          <input
+            id="controlNumber"
+            type="tel"
+            class="big-input"
+            name="controlNumber"
+            [(ngModel)]="controlNumber"
+            placeholder="Ej. 211020327"
+            required
+            minlength="8"
+            [disabled]="isLoading"
+          />
+        </div>
+
+        <div
+          *ngIf="message"
+          class="alert-box"
+          [ngClass]="messageType"
+        >
+          <span>{{ message }}</span>
+        </div>
+
+        <button
+          type="submit"
+          class="btn-submit"
+          [disabled]="isLoading || !controlNumber.trim()"
+        >
+          {{ isLoading ? 'REGISTRANDO...' : 'REGISTRAR SALIDA' }}
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 TecNM Salina Cruz</p>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+.conference-list-container {
+  padding: 24px;
+  background-color: #f8f9fa;  
+  min-height: 100vh;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.header-section button mat-icon {
+  margin-right: 8px;
+}
+
+.search-container {
+  margin-bottom: 16px;
+}
+
+.search-field {
+  width: 40%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+::ng-deep .search-field .mat-mdc-text-field-wrapper {
+  background-color: white !important;
+}
+
+/* TABLA - CONTENEDOR */
+.table-container {
+  background-color: white;
+  border-radius: 4px; /* Bordes más sutiles como en Grupos */
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); /* Sombra estándar de Material */
+  overflow: hidden;
+}
+
+table.mat-mdc-table {
+  width: 100%;
+}
+
+/* ENCABEZADOS DE TABLA (HEADER) */
+th.mat-mdc-header-cell {
+  padding: 0 16px; /* Sin padding vertical extra */
+  height: 56px; /* Altura estándar de Material */
+  font-weight: 600;
+  color: #424242; /* Color gris oscuro estándar */
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+}
+
+/* CELDAS DE DATOS (BODY) */
+td.mat-mdc-cell {
+  padding: 0 16px; /* Quitamos el padding de 14px que la hacía gorda */
+  height: 48px; /* Altura compacta estándar */
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+/* Filas - Efecto Hover opcional para mejor visualización */
+tr.mat-mdc-row:hover {
+  background-color: #f5f5f5;
+}
+
+.mat-column-acciones {
+  width: 140px;   
+  white-space: nowrap;  
+  text-align: center; 
+  padding-right: 8px !important;
+}
+
+td.mat-mdc-cell button.mat-mdc-icon-button {
+  display: inline-flex;   
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  margin: 0 2px;  
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.error-message {
+  padding: 16px;
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}

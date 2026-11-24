@@ -1,0 +1,24 @@
+.list-container {
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 100%;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+}
+.search-bar {
+  width: 35%;
+  margin-bottom: 20px; 
+}
