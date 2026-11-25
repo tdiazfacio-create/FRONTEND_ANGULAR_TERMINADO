@@ -1,11 +1,12 @@
 .layout-container {
-  height: 100vh; 
+  height: 100vh;
+  height: 100dvh;
   width: 100%;
 }
 
 .sidenav {
-  width: 260px;   
-  background-color: #002244; 
+  width: 260px;
+  background-color: #002244;
   color: white;
   border-right: none;
   box-shadow: 3px 0 6px rgba(0, 0, 0, 0.1);
@@ -17,6 +18,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 10px;
 }
+
 .sidenav-header img {
   max-width: 70%;
   height: auto;
@@ -25,23 +27,27 @@
 :host ::ng-deep .sidenav .mat-mdc-list-item .mdc-list-item__primary-text {
   color: rgba(255, 255, 255, 0.85) !important;
   font-size: 0.9rem;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   font-weight: 500;
 }
+
 :host ::ng-deep .sidenav .mat-mdc-list-item .mat-icon {
   color: rgba(255, 255, 255, 0.7) !important;
   margin-right: 16px;
 }
+
 :host ::ng-deep .sidenav .mat-mdc-list-item {
   height: 48px;
+  width: calc(100% - 20px);
   margin: 0 10px;
   border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
 :host ::ng-deep .sidenav .mat-mdc-list-item.active-link {
-  background-color: #004a99 !important;   
+  background-color: #004a99 !important;
 }
+
 :host ::ng-deep .sidenav .mat-mdc-list-item.active-link .mdc-list-item__primary-text,
 :host ::ng-deep .sidenav .mat-mdc-list-item.active-link .mat-icon {
   color: white !important;
@@ -51,6 +57,7 @@
 :host ::ng-deep .sidenav .mat-mdc-list-item:hover {
   background-color: rgba(255, 255, 255, 0.08) !important;
 }
+
 :host ::ng-deep .sidenav .mat-mdc-list-item:hover .mdc-list-item__primary-text,
 :host ::ng-deep .sidenav .mat-mdc-list-item:hover .mat-icon {
   color: white !important;
@@ -58,32 +65,94 @@
 
 :host ::ng-deep mat-divider {
   border-top-color: rgba(255, 255, 255, 0.1);
-  margin: 10px 10px;
+  margin: 10px;
 }
 
-.main-content { 
-  display: flex; 
-  flex-direction: column; 
-  background-color: #f4f7fa;  
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f7fa;
+  min-width: 0;
 }
+
 .toolbar {
-  background-color: white; 
+  background-color: white;
   color: #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  height: 64px; 
-  position: sticky; 
-  top: 0; 
+  height: 64px;
+  position: sticky;
+  top: 0;
   z-index: 2;
   padding: 0 24px;
+  flex-shrink: 0;
 }
-.toolbar-spacer { flex: 1 1 auto; }
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
 .profile-button {
-  width: 40px; height: 40px; border-radius: 50%;
-  background-color: #e0e0e0; margin-left: 16px;
-  background-size: cover; background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-left: 16px;
+  background-size: cover;
+  background-position: center;
 }
-.content-area { 
-  flex-grow: 1; 
-  padding: 24px; 
-  overflow-y: auto; 
+
+.content-area {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 24px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.mobile-menu-button {
+  color: #002244;
+}
+
+/* DISEÑO RESPONSIVE PARA CELULARES Y TABLETAS */
+
+@media screen and (max-width: 768px) {
+
+  .sidenav {
+    width: 250px;
+    max-width: 85vw;
+  }
+
+  .toolbar {
+    height: 56px;
+    padding: 0 10px;
+  }
+
+  .content-area {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .profile-button {
+    margin-left: 8px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu-button {
+    margin-right: 8px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .content-area {
+    padding: 8px;
+  }
+
+  .toolbar {
+    padding: 0 8px;
+  }
+
 }
