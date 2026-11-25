@@ -155,3 +155,84 @@
   font-size: 14px;
   margin-top: 15px;
 }
+
+/* Diseño adaptable para celulares y tablets */
+@media screen and (max-width: 1024px) {
+
+  .login-page-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .login-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .form-section {
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+  }
+
+  .form-content {
+    padding: 30px 25px;
+  }
+
+  .form-header img {
+    width: 170px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .title-group h1 {
+    font-size: 26px;
+  }
+
+  .title-group p {
+    font-size: 14px;
+  }
+
+  .custom-form-group {
+    margin-top: 25px;
+  }
+
+  .custom-form-group input {
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .input-wrapper input {
+    padding-right: 35px;
+  }
+
+  .login-button {
+    margin-top: 30px;
+    font-size: 16px !important;
+  }
+
+  .right-side-container {
+    width: 100%;
+  }
+
+  .project-title-container-right {
+    margin-bottom: 15px;
+  }
+
+  .project-desc-right {
+    font-size: 17px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .itsal-logo-container img {
+    width: 180px;
+    max-width: 100%;
+  }
+}
